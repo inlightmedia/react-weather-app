@@ -21,7 +21,7 @@ var React = require('react');
 // 	);
 // }
 
-// THIS USES THE OBJECT DESTRUCTURING SYNTAX RIGHT IN THE ARGUMENTS AREA OF THE ARROW FUNCTION
+// THIS USES THE ES6 OBJECT DESTRUCTURING SYNTAX RIGHT IN THE ARGUMENTS AREA OF THE ARROW FUNCTION
 var WeatherMessage = ({temp, location}) => {
 	// Same as var temp = props.temp, location = props.location;
 	return (
