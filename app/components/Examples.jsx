@@ -1,6 +1,7 @@
 
 // require alias' requires Node 5+
 var React = require('react');
+var {Link} = require('react-router');
 
 // OLD STANDARD SYNTAX
 // ===================
@@ -24,7 +25,23 @@ var React = require('react');
 // ===============================================
 var Examples = (props) => {
 	return (
-		<h3>Examples Header</h3>
+		<div>
+			<h1 className="text-center">Examples</h1>
+			<p>Here are a few examples locations to try out.</p>
+			<ol>
+				<li>
+					<Link to='/?location=Philedelphia'>Philedelphia, PA</Link>
+				</li>
+				<li>
+					<Link to='/?location=Rio'>Rio, Brazil</Link>
+				</li>
+				<li>
+					<Link to='/?location=Paris'>Paris, France</Link>
+				</li>
+				<li><Link to='/?location=Berlin'>Berlin, Germany</Link></li>
+			</ol>
+		</div>
+
 	);
 }
 
