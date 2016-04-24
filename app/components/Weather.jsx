@@ -16,7 +16,10 @@ var Weather = React.createClass({
 		//debugger; //debugger stops the app at this place in devtools
 		this.setState({
 			isLoading: true,
-			errorMessage: undefined
+			//resets the following variables before the search takes place
+			errorMessage: undefined,
+			location: undefined,
+			temp: undefined
 		});
 		OpenWeatherMap.getTemp(location).then(function (temp) {
 			that.setState({
@@ -31,6 +34,21 @@ var Weather = React.createClass({
 				errorMessage: e.message
 			});
 		});
+	},
+	componentDidMount: function(){
+		var location = this.props.location.query.location;
+		if (location && location.length > 0){
+			this.handleSearch(location);
+			window.location.hash = '#/';
+		}
+	},
+	// This built in react function detects a change in props and updates them so that a change in props from the URI query string will trigger a change in props
+	componentWillReceiveProps: function(newProps){
+		var location = newProps.location.query.location;
+		if (location && location.length > 0){
+			this.handleSearch(location);
+			window.location.hash = '#/';
+		}
 	},
 	render: function() {
 		// This sets the properties of this.state as thier own variable names (for code readablity only)
