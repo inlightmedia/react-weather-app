@@ -10,6 +10,7 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 // Load foundation
 // style! injects into the HTML css! loads into the JS
 require('style!css!foundation-sites/dist/foundation.min.css');
+require('style!css!applicationStyles');
 $(document).foundation();
 
 // Route Components

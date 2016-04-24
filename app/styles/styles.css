@@ -1,0 +1,11 @@
+main {
+ padding-top: 30px;
+}
+
+.page-title {
+	margin: 2.5rem 0;
+}
+
+input[type=search] {
+	box-shadow: none;
+}
