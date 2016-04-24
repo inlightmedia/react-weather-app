@@ -1,9 +1,7 @@
-main {
- padding-top: 30px;
-}
+$space: 2.5rem;
 
 .page-title {
-	margin: 2.5rem 0;
+	margin: $space 0;
 }
 
 input[type=search] {
